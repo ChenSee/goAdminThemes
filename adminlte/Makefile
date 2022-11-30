@@ -35,8 +35,8 @@ rebuild-dist:
 	rm -rf $(SEPARATION_PATH)/public/assets/vendor
 
 # combine frontend assets(js/css)
-# 合并并压缩前端js/css
-combine: remove combine-js combine-css
+# 合并并压缩前端js/css remove
+combine: combine-js combine-css
 
 combine-js:
 	$(CLI) combine js --hash=true --src=$(ASSETS_PATH)/src/js/all/ --dist=$(ASSETS_PATH)/dist/js/all.min.js
@@ -55,7 +55,7 @@ combine-css:
 # 使用packr2工具将css/js等前端资源合并为一个go文件
 # more: https://github.com/gobuffalo/packr
 build-assets:
-	$(CLI) compile asset
+	# $(CLI) compile asset
 	packr2 clean
 	packr2
 
