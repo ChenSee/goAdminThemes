@@ -78,7 +78,7 @@ fmt:
 # remove useless system files.
 # 删除系统产生的无用文件，防止被一并合并到golang文件中
 remove:
-	find ./ -name ".DS_Store" -depth -exec rm {} \;
+	# find ./ -name ".DS_Store" -depth -exec rm {} \;
 
 # build assets zip of separation theme.
 # 构建分离主题资源文件压缩包
