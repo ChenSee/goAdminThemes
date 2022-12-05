@@ -57,6 +57,7 @@ combine-css:
 build-assets:
 	$(CLI) compile asset
 	sed -i 's/\\/\//g' ./resource/assets_*
+	sed -i 's/AR\//github.com\/ChenSee\//g' ./adminlte-*
 	packr2 clean
 	packr2
 

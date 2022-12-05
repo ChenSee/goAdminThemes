@@ -65,6 +65,7 @@ combine-css:
 build-assets:
 	$(CLI) compile asset
 	sed -i 's/\\/\//g' ./resource/assets_*
+	sed -i 's/AR\//github.com\/ChenSee\//g' ./sword-*
 	packr2 clean
 	packr2
 
