@@ -7,4 +7,4 @@
 // and any other packr generated files.
 package adminlte
 
-import _ "github.com/ChenSee/goAdminThemes/adminlte/packrd"
+import _ "adminlte/packrd"
