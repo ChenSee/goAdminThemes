@@ -65,9 +65,9 @@ combine-css:
 build-assets:
 	$(CLI) compile asset
 	sed -i 's/\\/\//g' ./resource/assets_*
-	sed -i 's/AR\//github.com\/ChenSee\//g' ./sword-*
 	packr2 clean
 	packr2
+	sed -i 's/AR\/goAdminThemes\///g' ./sword-*
 
 # turn golang template files into a go file.
 # 将所有golang模板文件(.tmpl)合并为一个golang文件
