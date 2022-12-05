@@ -7,4 +7,4 @@
 // and any other packr generated files.
 package sword
 
-import _ "github.com/ChenSee/goAdminThemes/sword/packrd"
+import _ "AR/goAdminThemes/sword/packrd"

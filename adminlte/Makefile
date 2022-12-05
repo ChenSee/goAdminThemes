@@ -55,7 +55,8 @@ combine-css:
 # 使用packr2工具将css/js等前端资源合并为一个go文件
 # more: https://github.com/gobuffalo/packr
 build-assets:
-	# $(CLI) compile asset
+	$(CLI) compile asset
+	sed -i 's/\\/\//g' ./resource/assets_*
 	packr2 clean
 	packr2
 
