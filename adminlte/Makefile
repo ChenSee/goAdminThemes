@@ -8,7 +8,7 @@ all: build
 
 # build a theme
 # 构建主题
-build: rebuild-dist combine build-separation-zip build-assets build-tmpl clean fmt
+build: rebuild-dist build-separation-zip combine build-assets build-tmpl clean fmt
 
 # clean old dist folder, create new dist folder.
 # 删除旧的dist文件夹，新建新的dist文件夹
@@ -35,8 +35,8 @@ rebuild-dist:
 	rm -rf $(SEPARATION_PATH)/public/assets/vendor
 
 # combine frontend assets(js/css)
-# 合并并压缩前端js/css remove
-combine: combine-js combine-css
+# 合并并压缩前端js/css
+combine: remove combine-js combine-css
 
 combine-js:
 	$(CLI) combine js --hash=true --src=$(ASSETS_PATH)/src/js/all/ --dist=$(ASSETS_PATH)/dist/js/all.min.js
@@ -56,10 +56,8 @@ combine-css:
 # more: https://github.com/gobuffalo/packr
 build-assets:
 	$(CLI) compile asset
-	sed -i 's/\\/\//g' ./resource/assets_*
 	packr2 clean
 	packr2
-	sed -i 's/AR\//github.com\/ChenSee\//g' ./adminlte-*
 
 # turn golang template files into a go file.
 # 将所有golang模板文件(.tmpl)合并为一个golang文件
@@ -80,7 +78,7 @@ fmt:
 # remove useless system files.
 # 删除系统产生的无用文件，防止被一并合并到golang文件中
 remove:
-	# find ./ -name ".DS_Store" -depth -exec rm {} \;
+	find ./ -name ".DS_Store" -depth -exec rm {} \;
 
 # build assets zip of separation theme.
 # 构建分离主题资源文件压缩包

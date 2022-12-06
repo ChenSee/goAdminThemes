@@ -2715,17 +2715,9 @@ var TemplateList = map[string]string{"403": `<div class="missing-content">
     </aside>
 {{end}}`, "footer": `{{define "footer"}}
     <footer class="main-footer">
-        <!-- <div class="pull-right hidden-xs">
-            <b>Version</b> {{.System.Version}}
-        </div>
-        <div class="pull-right hidden-xs">
-            <b>Theme</b> {{.System.Theme}}&nbsp;&nbsp;
-        </div> -->
-        <strong>Powered by {{.FooterInfo}}</strong>
-        
+        <strong>Powered by {{.FooterInfo}}.</strong>
     </footer>
-{{end}}
-`, "head": `{{define "head"}}
+{{end}}`, "head": `{{define "head"}}
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">

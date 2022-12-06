@@ -14,7 +14,7 @@ package main
 
 import (
 	...
-	_ "github.com/ChenSee/goAdminThemes/adminlte"
+	_ "github.com/GoAdminGroup/themes/adminlte"
 	...
 )
 
