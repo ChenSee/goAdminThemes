@@ -3,9 +3,9 @@ package card
 import (
 	"html/template"
 
-	"github.com/GoAdminGroup/go-admin/modules/utils"
-	adminTemplate "github.com/GoAdminGroup/go-admin/template"
-	"github.com/GoAdminGroup/go-admin/template/types"
+	"github.com/ChenSee/go-admin/modules/utils"
+	adminTemplate "github.com/ChenSee/go-admin/template"
+	"github.com/ChenSee/go-admin/template/types"
 )
 
 type Card struct {
